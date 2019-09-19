@@ -1,0 +1,9 @@
+numpy
+matplotlib
+seaborn
+
+PyGObject
+PyGObject-stubs
+
+pylint
+flake8
