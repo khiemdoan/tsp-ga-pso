@@ -1,1 +1,2 @@
 from .genetic_algorithm import GeneticAlgorithm
+from .particle_swarm_optimization import ParticleSwarmOptimization
