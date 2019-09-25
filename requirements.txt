@@ -1,6 +1,7 @@
 numpy
 matplotlib
 seaborn
+jupyter
 
 PyGObject
 PyGObject-stubs

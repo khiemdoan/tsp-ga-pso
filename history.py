@@ -27,9 +27,13 @@ class History:
 
         axis = figure.subplots(1, 1)
         axis.clear()
-        axis.plot(x_ga, y_ga)
-        axis.plot(x_pso, y_pso)
+        ga, = axis.plot(x_ga, y_ga)
+        pso, = axis.plot(x_pso, y_pso)
+        axis.legend((ga, pso), ('GA', 'PSO'))
 
         self._canvas.draw()
         time.sleep(1e-2)
-        figure.clf()
+        try:
+            figure.clf()
+        except:
+            pass

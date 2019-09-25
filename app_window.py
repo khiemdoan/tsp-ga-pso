@@ -69,8 +69,10 @@ class AppWindow(Gtk.ApplicationWindow):
             self._pause = False
             self.control_button.set_label('Stop')
             if self.ga_radio.get_active():
+                self._ga_history = []
                 self._algorithm = GeneticAlgorithm(self._cities, self._cost_map)
             else:
+                self._pso_history = []
                 self._algorithm = ParticleSwarmOptimization(self._cities, self._cost_map)
             self._alg_thread = threading.Thread(target=self.execute_thread, daemon=True)
             self._alg_thread.start()
