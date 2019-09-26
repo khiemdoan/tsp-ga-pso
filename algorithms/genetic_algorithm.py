@@ -56,8 +56,9 @@ class GeneticAlgorithm(Algorithm):
     def _mutate(self, individual: Tour):
         individual = deepcopy(individual)
         idx1 = random.randint(0, len(self.cities) - 1)
-        idx2 = random.randint(0, len(self.cities) - 1)
-        individual[idx1], individual[idx2] = individual[idx2], individual[idx1]
+        individual[idx1:] = individual[idx1:][::-1]
+        # idx2 = random.randint(0, len(self.cities) - 1)
+        # individual[idx1], individual[idx2] = individual[idx2], individual[idx1]
         return individual
 
     def select(self, population):
